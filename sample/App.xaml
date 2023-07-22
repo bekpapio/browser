@@ -1,0 +1,15 @@
+﻿<Application x:Class="sample.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:sample"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <FontFamily x:Key="FontAwesome">/Fonts/fontawesome-webfont.ttf#FontAwesome</FontFamily>
+
+        <Style x:Key="bkbtn" TargetType="Button">
+            <Setter Property="Foreground" Value="Blue"/>
+
+        </Style>
+
+    </Application.Resources>
+</Application>

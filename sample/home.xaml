@@ -1,0 +1,143 @@
+﻿<Page x:Class="sample.home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:sample"
+      xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="home"
+      Loaded="onPageLoad">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30px"/>
+            <RowDefinition Height="40px"/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="nmlbl" Grid.Row="0" Content="SONIC" Foreground="white" FontSize="21" HorizontalAlignment="Center" FontFamily="Stencil"  Margin="358,0"></Label>
+        
+
+
+        <Button x:Name="bkbtn" HorizontalAlignment="Left" Margin="29,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Bkbtn_Click" >
+            <fa:IconImage Icon="ArrowLeft"/>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="12" Width="50" Height="25" >
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Button x:Name="frdbtn"  HorizontalAlignment="Left" Margin="104,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="frdbtn_click">
+            <fa:IconImage Icon="ArrowRight" />
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="12" Width="50" Height="25" >
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <!--<Button x:Name="rebtn"  HorizontalAlignment="Left" Margin="179,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" >
+            <fa:IconImage Icon="Home" />
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Style>
+            </Button.Style>
+            
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="12" Width="55" Height="25" >
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>-->
+
+
+        <TextBox x:Name="search" HorizontalAlignment="Left" VerticalContentAlignment="Center" 
+                 Height="35" Margin="196,5,-21,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="625">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Background" Value="#d9d9d9"/>
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="Foreground" Value="Black"/>
+
+                </Style>
+            </TextBox.Style>
+
+            <!--<TextBox.Template>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Width="550" Height="30" CornerRadius="2" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>-->
+
+        </TextBox>
+
+
+        <Button x:Name="srchbtn"  HorizontalAlignment="Left" Margin="803,10,-78,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Search" IsDefault="True">
+            <fa:IconImage Icon="Search" />
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="12" Width="55" Height="25" >
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <WebBrowser x:Name="browser" HorizontalAlignment="Left" Height="560" Margin="10,10,-260,-190" Grid.Row="2" VerticalAlignment="Top" Width="1050"  Grid.RowSpan="2" />
+
+        <Frame Content="Frame" HorizontalAlignment="Left" Height="100" Margin="-129,99,0,-163" Grid.Row="3" VerticalAlignment="Top" Width="100"  NavigationUIVisibility="Hidden"/>
+
+        <Button x:Name="bokbtn"  HorizontalAlignment="Left" Margin="866,10,-130,0" Grid.Row="1" VerticalAlignment="Top" Width="64" Height="25" Click="Bokbtn_Click">
+            <fa:IconImage Icon="Bookmark" />
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="12" Width="55" Height="25" >
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+    </Grid>
+</Page>
